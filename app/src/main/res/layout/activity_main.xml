@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/appTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="2dp"
+        android:ems="10"
+        android:hint="@string/please_enter_your_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/textViewBeverageType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
+
+    <TextView
+        android:id="@+id/textViewBeverageType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:gravity="fill_horizontal|center_vertical"
+        android:text="@string/textViewBeverageType"
+        app:layout_constrainedWidth="false"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupBeverageType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCustomerName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCustomerName"
+        app:layout_constraintWidth_max="wrap" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupBeverageType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/radioButtonTea"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewBeverageType"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeverageType">
+
+        <RadioButton
+            android:id="@+id/radioButtonTea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radiobuttonTea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeverageType" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/radiobuttonCoffee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonTea"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBeverageType" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAddOns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/textviewAddOns"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAddMilk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewBeverageType"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupBeverageType" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAddMilk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkboxAddMilk"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddOns"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddOns" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAddSugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/checkboxAddSugar"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxAddMilk"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddOns" />
+
+    <TextView
+        android:id="@+id/textViewBeverageSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/textviewBeverageSize"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddOns"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAddSugar" />
+
+    <Spinner
+        android:id="@+id/spinnerSizeOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textViewBeverageSize"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeverageSize" />
+
+    <TextView
+        android:id="@+id/textViewAddedFlavour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/textviewAddedFlavour"
+        app:layout_constraintStart_toStartOf="@+id/textViewBeverageSize"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSizeOptions" />
+
+    <Button
+        android:id="@+id/buttonPlaceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/buttonPlaceOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextViewProvince" />
+
+    <Spinner
+        android:id="@+id/spinnerAddedFlavour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddedFlavour"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddedFlavour" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewProvince"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/province"
+        app:layout_constraintStart_toStartOf="@+id/textViewAddedFlavour"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerAddedFlavour"
+        android:completionThreshold="2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Assignment01</string>
+    <string name="appTitle">The Beverage</string>
+    <string name="textViewBeverageType">Please select your Beverage Type</string>
+    <string name="please_enter_your_name">Please Enter Your Name</string>
+    <string name="radiobuttonTea">Tea</string>
+    <string name="radiobuttonCoffee">Coffee</string>
+    <string name="textviewAddOns">Please Select any Add Ons if desired</string>
+    <string name="checkboxAddMilk">Milk</string>
+    <string name="checkboxAddSugar">Sugar</string>
+    <string name="textviewBeverageSize">Please Select the size of your Beverage</string>
+    <string name="textviewAddedFlavour">Please Select your desired Flavourings</string>
+    <string name="radiobuttonFlavour1">None</string>
+    <string name="radiobuttonFlavour2">Vanilla</string>
+    <string name="radiobuttonFlavour3">Chocolate</string>
+    <string name="province">Please Enter Province</string>
+    <string name="buttonPlaceOrder">Place Order</string>
+</resources>
